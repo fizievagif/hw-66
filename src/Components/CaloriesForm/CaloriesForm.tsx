@@ -11,7 +11,7 @@ const CaloriesForm: React.FC<Props> = ({currentMeal, onSubmit}) => {
     time: '',
     description: '',
     calories: '',
-  }
+  };
 
   const [meals, setMeals] = useState<MealFormType>(initialState);
 

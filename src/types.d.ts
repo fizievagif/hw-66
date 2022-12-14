@@ -9,3 +9,7 @@ export interface MealType {
   description: string;
   calories: number;
 }
+
+export interface MealGetType extends MealType {
+  id: string;
+}

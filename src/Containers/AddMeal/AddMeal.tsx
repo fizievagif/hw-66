@@ -5,14 +5,14 @@ import Spinner from "../../Components/Spinner/Spinner";
 import {MealType} from "../../types";
 import axiosApi from "../../axiosApi";
 
-const NewMeal = () => {
+const AddMeal = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const addNewMeal = async (item: MealType) => {
     try {
       setLoading(true)
-      await axiosApi.post('meals.json', item);
+      await axiosApi.post('/meals.json', item);
       navigate('/')
     } catch (e) {
       console.error(e);
@@ -28,4 +28,4 @@ const NewMeal = () => {
   );
 };
 
-export default NewMeal;
+export default AddMeal;

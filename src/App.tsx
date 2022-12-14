@@ -1,7 +1,9 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
-import NewMeal from "./Containers/NewMeal/NewMeal";
+import AddMeal from "./Containers/AddMeal/AddMeal";
 import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Containers/Home/Home";
+import Edit from "./Containers/Edit/Edit";
 
 function App() {
   return (
@@ -11,7 +13,9 @@ function App() {
       </header>
       <div className="fs-3">
         <Routes>
-          <Route path="/new-meal" element={<NewMeal/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/new-meal" element={<AddMeal/>}/>
+          <Route path="/edit/:id" element={<Edit/>}/>
         </Routes>
       </div>
     </div>
